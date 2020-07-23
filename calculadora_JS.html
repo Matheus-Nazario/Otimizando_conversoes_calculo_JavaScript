@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Somando os números </title>
+    <style>
+    body{
+        background-color: rgb(211, 235, 255);
+        color: black;
+        font: 70pt;
+    }
+    p {
+        background-color: rgb(218, 218, 255);
+        color: rgb(255, 72, 72);
+
+     }
+    </style>
+</head>
+<body>
+    <h1> Calculadora em javaScript :-) </h1>
+    <h3> Escreva os números que vc deseja calcular: </h3>
+
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    
+    <h5> Qual é a função que vc deseja realizar? </h5>
+    
+    <input type="button" value="dividir" onclick="dividir()">
+    <input type="button" value="subtrair" onclick="subtrair()">
+    <input type="button" value="somar" onclick="somar()">
+    <input type="button" value="multiplicar" onclick="multiplicar()">
+
+    <div id="res"> Resultado... </div>
+    <script>
+        
+        function dividir() {
+            var tn1 = window.document.getElementById('txtn1') 
+            var tn2 = window.document.getElementById('txtn2') 
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var d = n1 / n2
+            res.innerHTML = `O Resultado da somoa dos núemos é ${d}`
+       }
+
+       function somar() {
+            var tn1 = window.document.getElementById('txtn1') 
+            var tn2 = window.document.getElementById('txtn2') 
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `O Resultado da somoa dos núemos é ${s}`
+       }
+
+       function multiplicar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var m = n1 * n2
+            res.innerHTML= `A multpicação entre os números é ${m}`
+       }
+
+       function subtrair() {
+           var tn1 = window.document.getElementById('txtn1')
+           var tn2 = window.document.getElementById('txtn2')
+           var n1 = Number(tn1.value)
+           var n2 = Number(tn2.value)
+           var s= n1 - n2
+           res.innerHTML = `Subtraindo o 1º número com o outro número é ${s}.`
+       }
+
+    </script>
+    
+    <p><strong> Matheus Nazário </strong> </p>
+</body>
+</html>
